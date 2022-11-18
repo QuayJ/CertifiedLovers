@@ -1,81 +1,292 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Papi Certified</title>
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="papisHome">
-     <!-- This is for SVG-->
-     <div class="lineContainer">
-        <svg  viewBox="0 0 250 1054" fill="none" preserveAspectRatio="xMidYMax meet" >
-                <rect width="1276" height="1734"/>
-                    <path d="M100 1L90 81L1 60L43 160L147 114L177 199L100 144L51 194L235 267L126 278L116 231V278L15 290L106 326L43 387L111 332H249L126 338L201 421V514L192 427H116V481H106V427H36L56 527H43L27 427L21 435L51 633V746V784C60.5 784.333 78.8 785.7 76 788.5C73.2 791.3 82.8333 784.667 88 781L94.5 799C95.6667 807.5 97.3 824.5 94.5 824.5C91 824.5 93.5 834 88 834C83.6 834 93.5 837 99 838.5C111.667 845.333 136.6 859.4 135 861C133 863 155 878 155 883.5C155 889 170 903 170 911C174 922.6 179 943.167 181 952L166.5 944.5M166.5 944.5L170 957.5C167.667 959 159 962 143 962L132 948.5L114 930V944.5H108.5L99 972H184V982H155V986L170 989L181 999.5L184 1014.5L181 1025.5L170 1035.5L159.5 1040V1044.5H184V1052.5H114L117 1044.5H155V1040L143 1035.5L135 1025.5L132 1010L135 995.5L149.5 986V982H123.5V989H132L99 1052.5L68 989H88L99 1018L114 989H119.5V982H79.5H46.5V986L61.5 992.5L68 1003L70.5 1014.5L68 1025.5L58.5 1035.5L46.5 1040V1044.5H85.5L90.5 1052.5H18V1044.5H42.5V1040L30 1035.5L20.5 1025.5L18 1014.5V1007L26 992.5L37.5 986H42.5V982H18V972H51H90.5L99 948.5H90.5L88 938L82.5 948.5H76L64.5 969.5H54L64.5 948.5L58.5 944.5L61.5 907C68.6667 912 83.5 921.5 85.5 919.5C87.5 917.5 88 925.667 88 930C68.1667 909 30.3 867 37.5 867C37.5 869.782 29.8333 846.159 26 834C22.3333 823.167 16.1 801.5 20.5 801.5C30 781 26 787 26 784C26 781.6 32.6667 784.667 36 786.5H42.5V799L33.5 804L30 809L33.5 817.5L42.5 822L51 817.5L58.5 829L64.5 817.5L70.5 822L82.5 817.5L85.5 809L79.5 801.5L73.5 799L64.5 804L58.5 817.5L51 804L46.5 801.5H26L22.5 807.5L26 824.5L30 838.5C34 843 42.5 847.5 46.5 847.5C51 847.5 61.5 853 61.5 847.5C61.5 842 65.5 855 76 844.5C84.4 836.1 85.8333 837 85.5 838.5H90.5C86 844.167 78.1 856.6 82.5 861C82.5 867.8 84.5 873.833 85.5 876L90.5 888L99 897.5L111.5 907L127.5 919.5L147 934L166.5 944.5Z" stroke-width="3" stroke="red"/>
-        </svg>
-                
-    </div>
-
-    <section class="one">
-        <h1 class="scroll" data-rate=".4" data-direction="vertical">PAPI</h1>
-    </section>
-    <section class="two">
-        <h1 class="scroll" data-rate=".2" data-direction="vertical">IS HOME</h1>
-        <p>A LEGEND</p>
-    </section>
-
-    <script>
-            let path = document.querySelector('path')
-            let pathLength = path.getTotalLength()
-
-            path.style.strokeDasharray = pathLength + ' ' + pathLength;
-            path.style.strokeDashoffset = pathLength;
-
-            window.addEventListener('scroll', () => {
-                  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-                  var drawLength = pathLength * scrollPercentage;
-
-                  path.style.strokeDashoffset = pathLength - drawLength;
-                  console.log(path.style.strokeDashoffset)
-            })
-    </script>
-    
-    <!--End for SVG-->
-
-    <nav class="homeNav">
-        <img src="images/ovoowl.png" class="logo">
+<html lang="en" dir="ltr">
+    <head>
+        <title>Papi's Home</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"> 
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Source+Code+Pro?query=source+code">
+        <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <body class="papisHome">
+        <!-- <div class="banner">
+            <div class="panel"> </div>
+            <div class="panel"> </div>
+            <div class="panel"> </div>
+            <div class="panel"> </div>
+            <div class="panel"> </div>
+        </div> -->
+    <nav class="homeNav" class="animate__animated animate__rollIn">
         <ul>
-            <li><a href="home.html" class="navigation_tab"  data-page="Papis Home" data-transition="tab">
-                <span>PAPI'S HOME</span></a>
+            <a href="index.html"> <img src="images/ovoowl.png" class="logo"> </a>
+
+            
+            <li><a href="lastpage.html" class="navigation_tab"  data-page="SVG" data-transition="tab">
+                <span>ADG</span></a>
             </li>
             <li><a href="Artists.html" class="navigation_tab"  data-page="OVO SOUND" data-transition="tab">
                 <span>OVO SOUND</span></a>
             </li>
             <li><a href="Team.html" class="navigation_tab"  data-page="OVO Team" data-transition="tab">
                 <span>OVO TEAM</span></a>
-            </li>
-            <!-- <li><a href="pollindex.html" class="navigation_tab"  data-page="How Well do you Know Drake" data-transition="tab">
-                <span>HOW WELL DO YOU KNOW DRAKE</span></a>
-            </li> -->
-            <li><a href="#" class="navigation_tab"  data-page="Certified Lovers" data-transition="tab">
-                <span>CERTIFIED LOVERS</span></a>
+            </li>    
+            <li><a href="play.html" class="navigation_tab"  data-page="SUBSCRIBE" data-transition="tab">
+                <span>SUBSCRIBE</span></a>
             </li>
         </ul>
     </nav>
-    <footer>
-        <div class="footerContent">
-            <h3>More chune for your headtop</h3>
-            <p>When i pull up on them, tell em Back Back<br>Six G-O-D, the Holy One<br>Coding it well!</p>
-            <ul class="socials">
-                <li><a href="https://en-gb.facebook.com/Drake/"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/drake"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.youtube.com/user/DrakeOfficial"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://www.instagram.com/champagnepapi/?hl=en"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2022 Octobers Very Own. Designed by <span>Quay</span></p>
-        </div>
-    </footer>
+        
+        <div class="container"> 
 
-</body>
+            <input type="button" value="OVO">
+            <div class="box">
+
+                <!-- <a href="Artists.html"> -->
+                <div class="card" id="front">
+                <img src="images/scorpion.webp" width="300" height="300">
+                <!-- <div class="card" id="backFront"></div> -->
+                </div>
+                <!-- </a> -->
+
+                <div class="card" id="back"><img src="images/herloss.jpeg" width="300" height="300"></div>
+
+                <div class="card" id="left"><img src="images/NWTS.jpeg" width="300" height="300"></div>
+
+                <div class="card" id="right"><img src="images/views.jpeg" width="300" height="300"></div>
+
+                <div class="card" id="top"><img src="images/Darklane.webp" width="300" height="300"></div>
+
+                <div class="card" id="bottom"><img src="images/Honestly-Nevermind.webp" width="300" height="300"></div>
+            </div>
+
+            <div class="homeContainer">
+                <!-- <div class="slide-right">
+                <h2>A Night Owl</h2>
+                </div> -->
+
+                <h2>Im A Night Owl</h2>
+                <p class="subtitle">This a different mode</p>
+            </div>
+            <h4 class="animate__animated animate__rollIn">Test</h4>
+            <footer>
+                <h3>More chune for your headtop</h3>
+                <p>When i pull up on them, tell em Back Back<br>Six G-O-D, the Holy One<br>Coding it well!</p>
+                <ul class="socials">
+                    <li><a href="https://en-gb.facebook.com/Drake/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/drake"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/DrakeOfficial"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/champagnepapi/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <p>copyright &copy;2022 Octobers Very Own. Designed by <span>Quay</span></p>
+            </footer>
+        </div>
+    </body>
 </html>
+            <!-- <script>
+                var container
+                function container(width, height, color, x, y) {
+  this.gamearea = gamearea;
+  this.width = width;
+  this.height = height;
+  this.angle = 100;
+  this.speed = 300;
+  this.x = x;
+  this.y = y;
+  this.update = function() {
+    ctx = myGameArea.context;
+    ctx.save();
+    ctx.translate(this.x, this.y);
+    ctx.rotate(this.angle);
+    ctx.fillStyle = color;
+    ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);
+    ctx.restore();
+  }
+  this.newPos = function() {
+    this.x += this.speed * Math.sin(this.angle);
+    this.y -= this.speed * Math.cos(this.angle);
+  }
+}
+            </script> -->
+   
+        <!--
+            This is the original page commented out until final
+
+    <a href="https://giphy.com/gifs/storyful-nba-drake-speech-7WvAUvZZTRpSuudobh/fullscreen">
+           <img src="images/drake.avif" alt="drake face" width="125">
+    </a>   
+        !--This is where the page really starts --
+            
+        <h2>Magic City when it drops</h2>
+        <p>
+            Im standing at the top <em>thats</em> how I <strong>know</strong> you never seen the top<br>
+            sign my name on the <em><strong>dot</strong></em>
+        </p>
+        
+    
+        <blockquote>
+            <p>I rememeber I <i>told</i> you I loved you, that was really in the past tense.
+                <cite>-DRAKE</cite>
+            </p>
+        </blockquote>
+        -- This is Drakes Birthday --
+        <time datetime="1986-10-24">October 24
+            <sup>
+                <small>th</small>
+            </sup>
+            , 1986
+        </time>
+        <p>
+            OVO
+            <sup>owls<sub>4ever</sub></sup>
+        </p>
+        <img id="Owl" src="images/135-1355602_ovo-logos-bing-images-drake-ovo-owl.png" alt="ovo owl" width="350">
+        !-- Here are 3 bars Drake said, what hes doing vs what they are doing --
+        <ol>
+            <li>im running out of <a href="#">opps</a></li>
+            <li><em>They're</em> running out of options</li>
+            <li>put them up for adoption</li>
+        </ol><br>
+        !-- Here are 3 things Drake has to say about his success --
+        <ul>
+            <li>im in the bank <b>thinking</b> poor you</li>
+            <li>this is <strong>not</strong> luck</li>
+            <li>no four leaf<img src="images/clover.webp" alt="mini clover" width="12"> </li>
+            <li>no horseshoe<img src="images/horseshoe.jpeg" alt="mini horseshoe" width="12"></li>
+        </ul>
+    
+        !-- Links at the bottom of page --
+        <a href="pollindex.html">
+            <h2>Click for More Drake</h2>
+        </a>
+        <a href="index.php">
+            <h2>Become a Certified Lover</h2>
+        </a>
+        <a href="history.html">
+            <h2>Battle Rap</h2>
+        </a>
+        <a href="Team.html"><h2>OVO Team</h2></a>
+        <a href="Artists.html"><h2>OVO Sound</h2></a>
+    -->
+        <!-- This is not a valid email address -->
+
+        <!--Navigation
+            <section>
+        
+                <div class="navContainer">
+                    <div class="navBox">
+
+                    </div>
+                </div>
+
+             -----Navigation
+            <nav class="headNav">
+                 <section class="soundTab">
+                <div>
+                    <a href="Artists.html" class="navigation_tab"  data-page="OVO Sound" data-transition="tab">
+                    </a><p></p>
+                    <span>BIG BIRDS FOEVER</span><p></p>
+                </div> 
+            </section> 
+            <section class="soundTab">
+                <div>
+                <a href="Artists.html" class="navigation_tab"  data-page="OVO SOUND" data-transition="tab">
+                    <span>OVO SOUND</span>
+                </a><p></p>
+                </div>
+            </section> 
+            <section class="teamTab">
+                <div>
+                <a href="Team.html" class="navigation_tab"  data-page="OVO Team" data-transition="tab">
+                    <span>OVO TEAM</span>
+                </a><p></p>
+                </div>
+            </section>
+            <section class="pollTab">
+                <div>
+                <a href="pollindex.html" class="navigation_tab"  data-page="How Well do you Know Drake" data-transition="tab">
+                    <span>HOW WELL DO YOU KNOW DRAKE</span>
+                </a><p></p>
+                </div>
+            </section> 
+            <section class="certifiedTab">
+                <div>
+                <a href="index.php" class="navigation_tab"  data-page="Certified Lovers" data-transition="tab">
+                    <span>CERTIFIED LOVERS</span>
+                </a><p></p>
+                </div>
+            </section> 
+            </nav>
+        </section> -->
+
+         <!-- <table style="width:100%">
+                    <tr>
+                      <th>Year</th>
+                      <th>Album</th>
+                    </tr>
+                    <tr>
+                        <td>2009</td>
+                        <td>So FAr Gone</td>
+                    </tr>
+                    <tr>
+                      <td>2010</td>
+                      <td>Thank Me Lter</td>
+                    </tr>
+                    <tr>
+                      <td>2011</td>
+                      <td>Take Care</td>
+                    </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td>Nothing Was The Same</td>
+                      </tr>
+                      <tr>
+                        <td>2015</td>
+                        <td>If You're Reading This Its Too Late</td>
+                      </tr>
+                      <tr>
+                        <td>2015</td>
+                        <td>What A Time To Be Alive</td>
+                      </tr>
+                      <tr>
+                        <td>2016</td>
+                        <td>Views</td>
+                      </tr>
+                      <tr>
+                        <td>2017</td>
+                        <td>More Life</td>
+                      </tr>
+                      <tr>
+                        <td>2018</td>
+                        <td>Scorpion</td>
+                      </tr>
+                      <tr>
+                        <td>2019</td>
+                        <td>Care Package</td>
+                      </tr>
+                      <tr>
+                        <td>2020</td>
+                        <td>Dark Lane Demo Tapes</td>
+                      </tr>
+                      <tr>
+                        <td>2021</td>
+                        <td>Certified Lover Boy</td>
+                      </tr>
+                      <tr>
+                        <td>2022</td>
+                        <td>Honestly, Nevermind</td>
+                      </tr>
+                      <tr>
+                        <td>2022</td>
+                        <td>Her Loss</td>
+                      </tr>
+                  </table>
+            </div> -->
+            
+       

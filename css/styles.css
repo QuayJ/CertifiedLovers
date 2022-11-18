@@ -3,6 +3,23 @@
   padding: 0px;
   box-sizing:border-box;
 }
+
+@media (max-width:1023px) /*tablet*/{
+
+}
+
+@media (max-width: 560px) /*mobile*/ {
+  min-width: 440px
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header header" "left main right" "footer footer footer";
+}
+
+p {
+  color: rgb(219, 34, 34);
+  opacity: 20%;
+  font-size: 300px;
+}
 /* .body {
     background-color:#000;;
     min-height: 100vh;
@@ -455,15 +472,15 @@ cursor: default;
 /*FOOTER STYLE below*/
 
 footer{
-  width: 100vw;
+  /* width: 100vw;
   font-family: sans-serif;
   padding: 10px;
   color: #fff;
-  border: 1px solid blue;
-  position: absolute;
-  bottom: 0px;
+  border: 40px solid blue;*/
+  /* position: absolute; */
+  /* bottom: 0px; */
   border: 3px solid white;
-  background-color: #141e30;
+  /* background-color: #141e30; */
   position: absolute; 
   /* display: flex;  */
   align-items: center;
@@ -473,7 +490,7 @@ footer{
    font-size: 25px;
 }
 
-p {
+ footer p {
   color: darkgoldenrod;
   font-family: fantasy;
   top: 10%;
@@ -540,10 +557,10 @@ section {
   font-family: 'Courier New', Courier, monospace;
   font-size: 4em;
 }
-.one {
+/* .one {
   background: url('../images/drakerap.jpg') ;
   background-size: cover;
-}
+} */
 .two {
 font-size: 6rem;
 position: relative;
@@ -587,6 +604,63 @@ cursor: default;
   transform: translate(-50%, -50%);
 
 }  */
+
+/*Below is styling for parralax scroll first page*/
+/*This is styling for first page*/
+/*This is styling for first page*/
+
+.firstPage {
+  background-color: #000;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background, .foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background{
+  transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5) ;
+}
+
+.foregroundTwo {
+  transform: translateZ(20px) scale(3) ;
+}
+
+.title{
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 5px yellow;
+}
+
+section {
+  font-size: 50px;
+  padding: 2rem;
+}
+
 
 /*this is for drake game*/
 /*this is for drake game*/
@@ -697,62 +771,4 @@ border: 1px solid blue;
 input {
   background: transparent;
   border: 12px solid red;
-}
-
-
-/*Below is for Play2.html*/
-/*Below is for Play2*/
-.world{
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 200px;
-}
-.score {
-  position: absolute;
-  font-size: 3vmin;
-  right: 1vmin;
-  top: 1vmin;
-}
-
-.startScreen {
-  position: absolute;
-  font-size: 5vmin;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 4px solid greenyellow;
-}
-.hide{
-  display: none;}
-
-.ground {
-  width: 100%;
-  height: 300px;
-  border: 2px solid black;
-  margin: auto;
-  background-image: url("https://cdn.vox-cdn.com/thumbor/VFEeLcwtuFVF75J-gZdrdXovZMY=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20058463/spire_club.jpg");
-  background-size: cover;
- 
-  /* position: absolute; */
-  /* width: 300%; */
-  bottom: 0;
-  left: calc(var(--lfet) * 1%); 
-}
-.dino{
-  position: absolute;
-  height: 100px;
-  width: 75px;
-  left: 50px;
-  top: 170px;
-    left: 1%;
-  height: 30%;
-  bottom: calc(var(--bottom) * 1);
- --bottom: 0; 
-}
-.cactus {
-  position: absolute;
-  left: calc(var(--left) * 1);
-  height: 30%;
-  bottom: 0;
 }
