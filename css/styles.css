@@ -4,15 +4,13 @@
   box-sizing:border-box;
 }
 
+
 @media (max-width:1023px) /*tablet*/{
 
 }
 
 @media (max-width: 560px) /*mobile*/ {
-  min-width: 440px
-  grid-template-columns: 150px 1fr 150px;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header header header" "left main right" "footer footer footer";
+  
 }
 
 p {
@@ -156,7 +154,7 @@ h2{
 }
 h2::before,
 h2::after {
-  content: "";
+  content: " ";
   position: absolute;
   top: 0;
   right: 0;
@@ -239,16 +237,20 @@ h2::after{
   
 }
 .homeNav ul li{
-  list-style-type: none;
+  /* list-style-type: none; */
   display: inline-block;
   margin-left: 40px;
+  /* padding-bottom: 200%; */
   border: 5px solid red;
+  writing-mode: vertical-rl;
+  
 }
 .homeNav ul li a{
   text-decoration: none;
-  color: #fff;
-  font-size: 17px;
+  color: white;
+  font-size: 18px;
   border: 2px solid blue;
+  
 }
 .papisHome{/*BODY*/
   background-color:#000;;
@@ -487,7 +489,7 @@ footer{
   justify-content: center;
   /* flex-direction: column; */
    /* text-align: center; */
-   font-size: 25px;
+   font-size: 10px;
 }
 
  footer p {
@@ -630,11 +632,19 @@ header {
   z-index: -1;
 }
 
-.background, .foreground {
+.foreground {
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  z-index: -2;
+}
+
+.background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
   z-index: -1;
 }
 
@@ -659,6 +669,32 @@ header {
 section {
   font-size: 50px;
   padding: 2rem;
+}
+
+#pappi {
+  width: 470px;
+  height: 150px;
+  /* border: 2px solid brown; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+#pappi:hover {
+  overflow: visible;
+  font-size: 50px;
+  color: #9ca42d; 
+  -webkit-text-stroke: .5px white;
+  font-weight: 200;
+}
+
+.aubrey:hover {
+  color: Orange;
+  font-size: 125px;
+  font-weight: bold;
+  -webkit-text-stroke: 2px rgb(129, 47, 47);
+  background-image: url("https://i.pinimg.com/originals/b6/1f/f1/b61ff1676672438b5d8bd2b80b6b3dbd.jpg");
+  border-radius: 50%;
 }
 
 
@@ -744,16 +780,16 @@ section {
   border: 40px solid purple;
 } */
 
-.login-box h1 {
+/* .login-box h1 {
 margin: 0 0 30px;
 padding: 0;
 color: white;
 text-align: center;
 font-family: cursive ;
 border: 1px solid blue;
-}
+} */
 
-.login-box {
+/* .login-box { */
   /* padding: 10px 0; */
   /* font-size: 16px; */
   /* color: #243b55;
@@ -761,7 +797,7 @@ border: 1px solid blue;
   /* border: none; */
   /* border-bottom: 50px solide white; */
   /* outline: none; */
-  background: transparent;
+  /* background: transparent;
   border: 12px solid rgb(0, 128, 105);
 }
 .user-box {
@@ -771,4 +807,4 @@ border: 1px solid blue;
 input {
   background: transparent;
   border: 12px solid red;
-}
+} */
