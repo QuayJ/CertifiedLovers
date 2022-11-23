@@ -18,12 +18,24 @@ document.addEventListener('keypress', () => {
 });
 
 /*To detect if rock hits dino*/
-setInterval(()=> {
-    score.innerText++
-    const dinoTop = parseInt(window.getComputedStyle(dino) 
-    .getPropertyValue('top'));
-    const rockLeft = parseInt(window.getComputedStyle(rock) 
-    .getPropertyValue('left'));
+
+
+let isPaused = true;
+const money = () => {
+    // score.innerText++;
+    
+    if(rock.style.animation == "" && isPaused) {
+        rock.style.animation = "rock 2s infinite";
+        document.getElementById("playGame").innerText = "Pause";
+        isPaused = false;
+    } else if(isPaused == false) {
+        rock.style.animation = ""
+        document.getElementById("playGame").innerText = "Play"
+        isPaused = true;
+    }
+    
+    const dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
+    const rockLeft = parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
 
     if (rockLeft < 0) {
         rock.style.display = 'none';
@@ -32,10 +44,23 @@ setInterval(()=> {
     }
 
     if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) { 
-        // alert("Your Score:" + score.innerText + "\n\nPlay Again?");
-        location.reload();
+        console.log("Your Score:" + score.innerText + "\n\nPlay Again?");
+        // location.reload();
     }
-}, 50);
+
+    const drake = dino.getBoundingClientRect().x;
+    // const rocks = rocks.getBoundingClientRect().x;
+    if(drake == rockLeft) {
+        console.log("Didn't jump fast enough")
+    }
+    console.log(rockLeft)
+}
+
+const playButton = document.getElementById("playGame")
+playButton.addEventListener("click", ()=> {
+    money();
+});
+
 
 //below is for is home legend
 const observer = new IntersectionObserver((entries) => {

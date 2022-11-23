@@ -4,7 +4,6 @@
   box-sizing:border-box;
 }
 
-
 @media (max-width:1023px) /*tablet*/{
 
 }
@@ -30,13 +29,14 @@ html {
 }
 
 .team_container{
+  margin: auto;
   width: 85vmin;
   /*position: absolute;*/
   transform: translate (-50%,-50%);
   top: 50%;
   left: 50%;
   overflow: hidden;
-  border: 10px solid black;
+  border: .5px solid white;
   border-radius: 45% 45% 45% 45%;
   opacity: 0.48;
 }
@@ -89,9 +89,21 @@ html {
 }
 
 .ovoTeam{
-  background-color:rgb(36, 35, 35);
+  background-color:black;
 }
 
+.glow {
+  display: flex;
+  justify-content: center;
+  color: transparent;
+  margin: auto;
+  /* border: 2px solid blue ; */
+  font-size: 30px;
+  text-shadow: 0 30px 30px rgb(115, 115, 14), 0 30px 5px rgb(144, 96, 8), 10px 12px 20px yellow;
+
+  /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 31pz #fff,
+  0 0 55px yellow, 0 0 91px yellow, 0 0 100px yellow, 0 0 122px yellow, 0 0 140px yellow; */
+}
 /*Styling for Slideshow on OVO Sound Page*/
 /*Styling for Slideshow on OVO Sound Page*/
 
@@ -242,7 +254,7 @@ h2::after{
   margin-left: 40px;
   /* padding-bottom: 200%; */
   border: 5px solid red;
-  writing-mode: vertical-rl;
+  /* writing-mode: vertical-rl; */
   
 }
 .homeNav ul li a{
@@ -374,61 +386,9 @@ input:focus~ .box #bottom{
   top: 180px;
 }
 
-/* continued css for home page, this is for the animated text above animated box*/
-
- /* .soundTab{
-  display: flex;
-  justify-content: overflow-center;
-  align-items: center;
-  min-height: 100vh;
-  background: #5d6c73;
-  writing-mode: vertical-lr;
-}
-.teamTab{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #232729;
-  writing-mode: vertical-lr;
-}
-.pollTab{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #3b4428;
-  writing-mode: vertical-lr;
-}
-.certiedTab{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #9ca42d;
-  writing-mode: vertical-lr; 
-} */
-
-
-
-
-
-/* .introNav{
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px 8%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid yellow;
-} */
-
 .introContent{
   text-align: center;
-  z-index: 2;
-  
+  z-index: 2;  
 }
 
 .introContent h1{
@@ -473,26 +433,9 @@ cursor: default;
 /*FOOTER STYLE*/
 /*FOOTER STYLE below*/
 
-footer{
-  /* width: 100vw;
-  font-family: sans-serif;
-  padding: 10px;
-  color: #fff;
-  border: 40px solid blue;*/
-  /* position: absolute; */
-  /* bottom: 0px; */
-  border: 3px solid white;
-  /* background-color: #141e30; */
-  position: absolute; 
-  /* display: flex;  */
-  align-items: center;
-  justify-content: center;
-  /* flex-direction: column; */
-   /* text-align: center; */
-   font-size: 10px;
-}
 
- footer p {
+
+  footer p {
   color: darkgoldenrod;
   font-family: fantasy;
   top: 10%;
@@ -508,21 +451,26 @@ footer{
   align-items: center;
   justify-content: center;
   margin: 1rem 0 3rem 0;
+  border: 5px dotted red;
 }
 .socials li{
   margin: 0 10px;
+  border: 2px solid blue;
 }
 .socials a{
   text-decoration: none;
   color: #bbb;
+  border: 2px solid green;
 }
 .socials a i{
   font-size: 1.1rem;
   transition: color 4s ease;
+  border: 5px solid pink
 }
 .socials a:hover i{
   color: #9ca42d;
-}
+  border: 10px solid white;
+} 
 
 
 /* .light{
@@ -754,7 +702,7 @@ section {
   left: 550px;/*width of game - width of rock*/
   background-image: url("http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/293546e0e809970.png");
   background-size: cover;
-  animation: rock 2s infinite;
+  /* animation: rock 2s infinite; */
 }
 @keyframes rock {
   0%{left: 550px;}
